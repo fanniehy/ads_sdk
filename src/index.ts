@@ -1,14 +1,4 @@
-interface Ads {
-    videourl: string,
-    size: string,
-    videowidth: number,
-    videoheight: number,
-}
+const SDK = require('./startSDK/index.ts');
 
-function getAds(ads: Ads) {
-    
-}
-
-let ads = { videourl: "Jane", size: "User", videowidth: 123, videoheight: 235 };
-
-document.body.innerHTML = getAds(ads);
+SDK.init('jarkim_sdk');
+SDK.getVideoResource();
