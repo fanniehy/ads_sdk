@@ -1,4 +1,7 @@
-const SDK = require('./startSDK/index.ts');
+class WinApk {
+  init(): void {
 
-SDK.init('jarkim_sdk');
-SDK.getVideoResource();
+  }
+}
+
+export default WinApk;
