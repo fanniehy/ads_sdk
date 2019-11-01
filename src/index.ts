@@ -1,4 +1,17 @@
-const SDK = require('./startSDK/index.ts');
+declare interface Options {
+  packageName: string;
+  appVersion: string;
+}
 
-SDK.init('jarkim_sdk');
-SDK.getVideoResource();
+class WinApk {
+  static init(options: Options): void {
+
+  }
+
+  static fetch(): Promise<AdResponse> {
+    const req = new AdRequest();
+    return Promise.reject();
+  }
+}
+
+export default WinApk;
