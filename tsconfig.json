@@ -1,11 +1,15 @@
 {
     "compilerOptions": {
       "outDir": "./dest/",
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "module": "commonjs",
       "target": "es6",
       "jsx": "react",
       "allowJs": true,
       "sourceMap": true   
-    }
+    },
+    "include": [
+      "./src/**/*",
+      "./src/@types/index.d.ts" 
+      ]
   }
