@@ -1,7 +1,3 @@
-class AdRequest {
+class AdRequest {}
 
-}
-
-class AdResponse {
-
-}
+class AdResponse {}

@@ -1,28 +1,25 @@
-
-
 import axios from 'axios';
 axios.defaults.baseURL = 'http://127.0.0.1:7003';
 
 const _env = process.env.NODE_ENV || 'dev';
-console.log(process);
 let envServer = {
-	host: '127.0.0.1',
-	port: 7003,
+    host: '127.0.0.1',
+    port: 7003,
 };
-if(_env === 'sit') {
-	envServer = {
-		host: '127.0.0.1',
-		port: 7005,
-	};
+if (_env === 'sit') {
+    envServer = {
+        host: '127.0.0.1',
+        port: 7005,
+    };
 } else if (_env === 'prod') {
-	envServer = {
-		host: '127.0.0.1',
-		port: 7008,
-	};
+    envServer = {
+        host: '127.0.0.1',
+        port: 7008,
+    };
 }
 
 export default {
-    get(interfaceName: string, data: Object = {}) {
+    get(interfaceName: string, data: Record<string, any> = {}) {
         axios({
             url: interfaceName,
             method: 'get',
@@ -34,15 +31,15 @@ export default {
             timeout: 10000, // default is `0` (no timeout)
         }).then((response) => {
             const { status, data } = response;
-            console.log(response);
-            if(status === 200) {
+            // console.log(response);
+            if (status === 200) {
                 return data;
             } else {
                 throw new Error();
             }
         });
     },
-    post(interfaceName: string, data: Object = {}) {
+    post(interfaceName: string, data: Record<string, any> = {}) {
         axios({
             url: interfaceName,
             method: 'post',
@@ -52,7 +49,7 @@ export default {
             },
             timeout: 10000, // default is `0` (no timeout)
         }).then((response) => {
-            console.log(response);
+            // console.log(response);
         });
     },
 };

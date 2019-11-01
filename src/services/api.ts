@@ -1,8 +1,7 @@
 import HttpBasic from '../libraries/HttpBasic';
 
 export default {
-    getAdsResource(interfaceName: string, data: Object) {
+    getAdsResource(interfaceName: string, data: Record<string, any>) {
         HttpBasic.get(interfaceName, data);
-        return 'getAdsResource';
-    }
-}
+    },
+};

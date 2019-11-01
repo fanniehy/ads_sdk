@@ -1,7 +1,7 @@
 import api from '../services/api';
 
 export default {
-    getAdsResource () {
+    getAdsResource() {
         api.getAdsResource('/fannie/jarkim', {});
-    }
-}
+    },
+};
